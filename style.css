@@ -1,0 +1,171 @@
+/* Общие стили */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    flex-wrap: wrap; /* Добавлено для адаптивности */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Главный блок */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.hero-title {
+    color: black;
+}
+
+.hero-subtitle {
+    color: black;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #e6b800;
+}
+
+/* Услуги */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    /* Изменения для шапки */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        display: block;
+        margin-top: 20px;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    /* Главный блок */
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+
+    /* Услуги */
+    .service-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Кнопка */
+    .button {
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Мобильная версия */
+    .hero-title {
+        font-size: 1.8em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+}
